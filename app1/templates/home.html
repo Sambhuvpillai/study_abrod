@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    /* From uiverse.io by @nikk7007 */
+button {
+ padding: 0.8em 1.8em;
+ border: 2px solid #17C3B2;
+ position: relative;
+ overflow: hidden;
+ background-color: transparent;
+ text-align: center;
+ text-transform: uppercase;
+ font-size: 16px;
+ transition: .3s;
+ z-index: 1;
+ font-family: inherit;
+ color: #17C3B2;
+}
+
+button::before {
+ content: '';
+ width: 0;
+ height: 300%;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%) rotate(45deg);
+ background: #17C3B2;
+ transition: .5s ease;
+ display: block;
+ z-index: -1;
+}
+
+button:hover::before {
+ width: 105%;
+}
+
+button:hover {
+ color: #111;
+}
+th,td{
+    border-collapse: collapse;
+    border: none;
+    color:white;
+}
+th{
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+
+}
+td{
+    padding: 10px;
+    border-bottom: 1px solid rgb(211, 211, 211);;
+}
+
+</style>
+<body>
+    <section class="container">
+        <h1 class="text-center">Student Dashboard</h1>
+        <div class="row text-white my-3">
+            <div class="col-sm-4  mx-2 my-2 " style="background-color: rgba(0, 0, 0, 0.692); border-radius: 20px; height:60vh;">
+                <h4 class="text-center py-2 fs-1">PROFILE</h4>
+                <div class="text-center">
+                <img src="https://th.bing.com/th/id/OIP.audMX4ZGbvT2_GJTx2c4GgHaHw?pid=ImgDet&rs=1" alt="prof" class="w-50 rounded-circle" >
+                </div>
+                <div class="text-center py-3 fs-3">
+                    <h6 class=" fs-5">Joining date:  20/05/2022</h6>
+                    <h6 class=" fs-5">Designation: Developer</h6>
+                </div>
+                
+
+            </div>
+           
+
+            <div class="col-sm-7  mx-2 my-2 ">
+                <div class=" text-white" style="background-color: rgba(0, 0, 0, 0.692); border-radius: 20px;  height:60vh;">
+                    {% comment %} <div class="col-sm-6 py-sm-3" >
+                        <h5>Name</h5>
+                        <h5>Email</h5>
+                        <h5>Department</h5>
+                        <h5>Contact</h5>
+                        <h5>Contry</h5>
+                        
+                        
+
+                    </div>
+                    <div class="col-sm-6  py-sm-3">
+                        <h5>Sherry</h5>
+                        <h5>sherry@gmail.com</h5>
+                        <h5>Developer</h5>
+                        <h5>9506783452</h5>
+                        <h5>US</h5>
+
+                    </div> {% endcomment %}
+                    <p class="pt-3 ps-2">Your Data Status</p>
+                    <table class= " fs-sm-5 w-100 ">
+                        <thead class="my-3">
+                            <tr>
+                            <th>Name</th>
+                            <th>:</th>
+                            <th>Sherry</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th>Email</th>
+                            <th>:</th>
+                            <th>sherry@gmail.com</th>
+                            </tr>
+                            <tr>
+                                <th>Department</th>
+                                <th>:</th>
+                                <th>Developer</th>
+                            </tr>
+                            <tr>
+                                <th>Contact</th>
+                                <th>:</th>
+                                <th>9506783452</th>
+                            </tr>
+                            <tr>
+                                <th>Contry</th>
+                                <th>:</th>
+                                <th>US</th>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                
+
+            </div>
+            <div>
+
+            </div>
+
+
+        </div>
+        <div class="row my-sm-5 ">
+            <div class="col-sm-4 my-2">
+                <a href="" ><button class="w-100">Newly AssignedLeads</button></a>
+
+            </div>
+            <div class="col-sm-4 my-2">
+                <a href="" ><button class="w-100">Current Leads</button></a>
+
+            </div>
+            <div class="col-sm-4 my-2">
+                <a href="" ><button class="w-100">Previous Leads</button></a>
+
+            </div>
+
+        </div>
+    </section>
+</body>
+{% endblock %}
